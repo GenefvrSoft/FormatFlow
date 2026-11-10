@@ -1,0 +1,51 @@
+Ordenar_articulo.py
+====================
+
+Reformats an academic article (.docx) according to the “clean” reference format:
+
+    Title[es]:...
+    Title[en]:...
+    Title[pt]:...                (if applicable)
+    Author 1¹ https://orcid.org/xxxx
+    Author 2¹ https://orcid.org/xxxx
+    ¹Affiliation
+    email1
+    email2
+    SUMMARY
+    <text>
+    Keywords: ...
+    ABSTRACT
+    <text>
+    Keywords: ...
+    SUMMARY                       (if applicable)
+    <text>
+    Keywords: ...
+    date-rec: YYYY-MM-DD
+    date-acc: YYYY-MM-DD
+    date-pub: YYYY-MM-DD
+    section:INTRODUCTION
+    ...
+    section:METHODS
+    ...
+    section:RESULTS...
+    ...
+    section:DISCUSSION
+    ...
+    section:CONCLUSIONS
+    ...
+    REFERENCES
+    ...
+
+The body of the document (introduction, methods, results, discussion,
+conclusions, tables, references) is NOT rewritten: it is preserved exactly as
+it appears in the original .docx file (including tables, italics, symbols, etc.), with only
+the “section:” labels prepended to the main headings.
+
+USAGE
+---
+    python3 sort_article.py input.docx output.docx
+
+If certain data is not detected correctly automatically (titles, authors,
+affiliations, etc.), edit the MANUAL_OVERRIDE section below to force
+those values instead of relying on automatic detection.
+“”
