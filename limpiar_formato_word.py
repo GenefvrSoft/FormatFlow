@@ -1,29 +1,4 @@
 #!/usr/bin/env python3
-"""
-limpiar_formato_word.py
-
-Elimina todo el formato de un documento Word (.docx) dejando solo texto plano
-con el estilo "Normal" por defecto: sin negritas, cursivas, subrayado, colores,
-fuentes personalizadas, tamaños, resaltados, alineaciones forzadas, sangrías,
-espaciados ni bordes. Funciona con párrafos, tablas (incluidas anidadas) y,
-opcionalmente, encabezados y pies de página.
-
-Uso (un solo archivo):
-    python limpiar_formato_word.py entrada.docx salida.docx
-    python limpiar_formato_word.py entrada.docx salida.docx --incluir-headers-footers
-    python limpiar_formato_word.py entrada.docx salida.docx --mantener-negrita-cursiva
-    python limpiar_formato_word.py entrada.docx salida.docx --eliminar-encabezados
-    python limpiar_formato_word.py entrada.docx salida.docx --eliminar-cuadros-texto
-
-Uso (varios archivos a la vez):
-    python limpiar_formato_word.py carpeta_entrada/ carpeta_salida/
-    python limpiar_formato_word.py carpeta_entrada/ carpeta_salida/ --sufijo _limpio
-
-    Si "entrada" es una carpeta, procesa todos los .docx que contiene (no entra en
-    subcarpetas) y guarda los resultados en "salida" (se crea si no existe), con el
-    mismo nombre de archivo, o con el sufijo indicado si se usa --sufijo.
-"""
-
 import argparse
 import sys
 from pathlib import Path
