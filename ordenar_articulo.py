@@ -1,57 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-ordenar_articulo.py
-====================
-
-Reordena un artículo académico (.docx) según el formato "limpio" de referencia:
-
-    Title[es]:...
-    Title[en]:...
-    Title[pt]:...                (si existe)
-    Autor 1¹ https://orcid.org/xxxx
-    Autor 2¹ https://orcid.org/xxxx
-    ¹Afiliación
-    email1
-    email2
-    RESUMEN
-    <texto>
-    Palabras clave: ...
-    ABSTRACT
-    <texto>
-    Keywords: ...
-    RESUMO                       (si existe)
-    <texto>
-    Palavras-chave: ...
-    date-rec: AAAA-MM-DD
-    date-acc: AAAA-MM-DD
-    date-pub: AAAA-MM-DD
-    section:INTRODUCCIÓN
-    ...
-    section:MÉTODOS
-    ...
-    section:RESULTADOS...
-    ...
-    section:DISCUSIÓN
-    ...
-    section:CONCLUSIONES
-    ...
-    REFERENCIAS
-    ...
-
-El cuerpo del documento (introducción, métodos, resultados, discusión,
-conclusiones, tablas, referencias) NO se reescribe: se conserva tal cual
-está en el .docx original (con sus tablas, cursivas, símbolos, etc.), solo
-se le anteponen las etiquetas "section:" a los títulos principales.
-
-USO
----
-    python3 ordenar_articulo.py entrada.docx salida.docx
-
-Si algunos datos no se detectan bien de forma automática (títulos, autores,
-afiliaciones, etc.), edite la sección MANUAL_OVERRIDE más abajo para forzar
-esos valores en vez de la detección automática.
-"""
 
 import re
 import sys
